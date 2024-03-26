@@ -1,0 +1,142 @@
+{
+    "name": "space leader controls",
+    "maps": [
+        {
+            "name": "rightXrController",
+            "id": "1a2559da-1c81-40d6-8ce1-e570b29b88ca",
+            "actions": [
+                {
+                    "name": "grip",
+                    "type": "Value",
+                    "id": "5b677398-025f-4132-98dd-44172171b551",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "rotation",
+                    "type": "Value",
+                    "id": "093f3ec1-46b2-4a62-b006-a0c0fe786d2b",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "trigger",
+                    "type": "Value",
+                    "id": "9333337c-22ab-4fab-8f66-d7a15e19e73d",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c45192bd-82ad-4cd8-b8e1-8015cb85f599",
+                    "path": "<XRController>{RightHand}/{Trigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfca484f-e261-4e3d-bb4c-8e63258e43c1",
+                    "path": "<XRController>{RightHand}/{Grip}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "471bfdfc-9d4a-418b-9bbc-387d918a67b8",
+                    "path": "<XRController>{RightHand}/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "leftXrController",
+            "id": "92357ff1-a7dd-4a93-9187-923018eb845c",
+            "actions": [
+                {
+                    "name": "grip",
+                    "type": "Value",
+                    "id": "1ee77bec-9fa8-40f8-8d7d-7a83f6666c9a",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "rotation",
+                    "type": "Value",
+                    "id": "d8a50541-5140-4fb7-a8a9-fab4a0b1a103",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "trigger",
+                    "type": "Value",
+                    "id": "8e45e103-5e83-422d-8aeb-f70c93b37b70",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ea6ac959-66c2-4636-bc02-ec42891eb201",
+                    "path": "<XRController>{LeftHand}/{Trigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a01f992-80cb-4f98-bb0c-02f532c849d0",
+                    "path": "<XRController>{LeftHand}/{Grip}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "28602a9e-fa76-4d90-8ec2-528e7b8d6151",
+                    "path": "<XRController>{LeftHand}/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
