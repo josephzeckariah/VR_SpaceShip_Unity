@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShipJoyStickValueReader : MonoBehaviour
 {
@@ -12,11 +13,7 @@ public class ShipJoyStickValueReader : MonoBehaviour
 	public Vector3 processedShipRotationInput;
 	public float shipSpeedInput;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-
-	}
+	public UnityEvent<Vector3,float> shipRotationInputThisFrame;
 
 	// Update is called once per frame
 	void Update()
@@ -36,6 +33,8 @@ public class ShipJoyStickValueReader : MonoBehaviour
 		{
 			shipSpeedInput = throttleChangerToGetInputFrom.speedOutput;
 		}
+
+		shipRotationInputThisFrame.Invoke(processedShipRotationInput, shipSpeedInput);
 		//	enginePowerApplied = (shipSpeedInput * 3) + Mathf.Abs(shipRotationInput.x) + Mathf.Abs(shipRotationInput.y) + Mathf.Abs(shipRotationInput.z);
 
 	}

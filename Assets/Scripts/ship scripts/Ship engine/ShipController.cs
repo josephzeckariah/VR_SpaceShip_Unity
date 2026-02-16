@@ -4,8 +4,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
-
 public class ShipController : MonoBehaviour
+{
+
+
+}
+	/*public class ShipController : MonoBehaviour
 {
 	public joystick joystickToGetInputFrom;
     Vector3 shipRotationInput;
@@ -74,4 +78,4 @@ public class ShipController : MonoBehaviour
 	}
 
 
-}
+}*/

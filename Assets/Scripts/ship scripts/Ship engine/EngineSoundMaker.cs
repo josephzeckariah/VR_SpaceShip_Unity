@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class EngineSoundMaker : MonoBehaviour
 {
 	
 
 	// Make enginePowerApplied public so it can be set from other scripts or the Inspector
-	public float enginePowerApplied;
+	//public float enginePowerApplied;
 
 	AudioSource shipAudioSource;
 
@@ -20,21 +21,16 @@ public class EngineSoundMaker : MonoBehaviour
 		shipAudioSource = this.GetComponent<AudioSource>();
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		RunEngineSounds();
-	}
+	
 
-
-	void RunEngineSounds()
+	public void RunEngineSounds(float PowerOfEngineToCOnvertToSound)
 	{
-		shipAudioSource.volume = Mathf.InverseLerp(0, 5, enginePowerApplied);
-		if (enginePowerApplied == 0)
+		shipAudioSource.volume = Mathf.InverseLerp(0, 5, PowerOfEngineToCOnvertToSound);
+		if (PowerOfEngineToCOnvertToSound == 0)
 		{
 			shipAudioSource.Stop();
 		}
-		else if (enginePowerApplied > 0 && !shipAudioSource.isPlaying)
+		else if (PowerOfEngineToCOnvertToSound > 0 && !shipAudioSource.isPlaying)
 		{
 			shipAudioSource.Play();
 		}
