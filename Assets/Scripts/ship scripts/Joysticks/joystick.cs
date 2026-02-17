@@ -71,17 +71,12 @@ public class joystick : MonoBehaviour
 		}
 	}
 
-
-
-
-	void animateJoyStick(Vector3 theNeg1Pos1ToAnimateBy)
-	{
-		zAxisAnimator.SetFloat("zAxisParameter", Mathf.InverseLerp(-1, 1, theNeg1Pos1ToAnimateBy.z));
-		xAxisAnimator.SetFloat("xAxisParameter", Mathf.InverseLerp(-1, 1, theNeg1Pos1ToAnimateBy.x));
-		yAxisAnimator.SetFloat("yAxisParameter", Mathf.InverseLerp(-1, 1, theNeg1Pos1ToAnimateBy.y));
-	}
-	                                                                   
 	
+	
+
+
+
+
 	//the whole part below is to transform the raw 360degrees roation to a -1,1 in each axis
 	Vector3 Vector3AngleToNeg1Pos1(Vector3 InputAngle)
 	{
@@ -119,4 +114,11 @@ public class joystick : MonoBehaviour
 
 		return OutputNeg1ToPos1;
 	}
+	void animateJoyStick(Vector3 theNeg1Pos1ToAnimateBy)
+	{
+		zAxisAnimator.SetFloat("zAxisParameter", Mathf.InverseLerp(-1, 1, theNeg1Pos1ToAnimateBy.z));
+		xAxisAnimator.SetFloat("xAxisParameter", Mathf.InverseLerp(-1, 1, theNeg1Pos1ToAnimateBy.x));
+		yAxisAnimator.SetFloat("yAxisParameter", Mathf.InverseLerp(-1, 1, theNeg1Pos1ToAnimateBy.y));
+	}
+
 }
